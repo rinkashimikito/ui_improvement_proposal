@@ -50,6 +50,7 @@ This is what we could do to improve code readability, make HTML and CSS less tig
 * remove jQuery dependency
   * do we really need jQuery? (http://youmightnotneedjquery.com/)
   * use Babel or shims/polyfills if needed
+  * if we don't want to remove jQuery we could at least write an adapter for this library so in the future, if situation changes, we could just swap the library and update the adapter leaving the code untouched
 * _if we use webpack/babel or remove jQuery then we will have to refactor all JS modules so it's managed by it; this could be done in one go but it doesn't have to be_
 ### View rendering
 In order to decrease code duplication and making the website composable (builded from separate components) and easier to maintain/extend we could create composable components from existing code so we can share them across the website(s). We could do it by:
