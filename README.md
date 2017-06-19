@@ -14,8 +14,8 @@ There are few things we could do to improve our build process. I'm not saying th
 ### Use babel (https://babeljs.io)
 * we could start using ES6 going forwards (Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows to use ES6 features in your projects and then compiles ES5 to use in production)
 * we could gradually rewrite existing code to ES6
-### Use linting (static code analysis) JS tool for testing against coding rules e.g. https://github.com/airbnb/javascript , https://github.com/airbnb/css
-In sum this helps devs to write code using same syntax and checks if there are errors in the code
+### Use linting (static code analysis) JS tool for testing against coding rules
+In sum this helps devs to write code using same syntax and checks if there are errors in the code. https://github.com/airbnb/javascript , https://github.com/airbnb/css
 * ESLint (http://eslint.org)
   * PROS
     * Flexible: any rule can be toggled, and many rules have extra settings that can be tweaked
@@ -40,7 +40,7 @@ In sum this helps devs to write code using same syntax and checks if there are e
     * No custom rule support
 * use SASS linting tool like https://www.npmjs.com/package/sass-lint
 ## Optimisation
-This is what we could do to improve code readability, make HTML and CSS less tightly coupled, smaller in size and independent from 3rd party libraries
+This is what we could do to improve code readability, make HTML and CSS less tightly coupled, smaller in size and independent from 3rd party libraries.
 ### SASS
 * cleanup sass structure so it's not coupled with the views
   * use BEM (http://getbem.com/introduction/)
