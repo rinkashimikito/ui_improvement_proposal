@@ -1,5 +1,5 @@
 # Proposed modernisation of SPTs UI
-The long term target for this update is to make code reuasble, easier to maintain and extend, using latest tools (or as latest as possible). Some of proposed changes are not crutial but good to have. Other ones are more expensive but have many pros in a longer run. There is a summary table sorted by priority at the end of this document.
+The long term target for this update is to make code reuasble, easier to maintain and extend, using latest tools (or as latest as possible). Some of the proposed changes are not crutial but good to have. Other ones are more expensive but have many pros in a longer run. There is a summary table sorted by priority at the end of this document.
 ## The build process
 There are few things we could do to improve our build process. I'm not saying that the process is bad and we definitely need to change it but some tools we use are not developed anymore and future extending might become tricky.
 ### Use Webpack (https://webpack.js.org/) for building front end
