@@ -14,6 +14,7 @@ There are few things we could do to improve our build process. I'm not saying th
 ### Use babel (https://babeljs.io)
 * we could start using ES6 going forwards (Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows to use ES6 features in your projects and then compiles ES5 to use in production)
 * we could gradually rewrite existing code to ES6
+
 ### Use linting (static code analysis) JS tool for testing against coding rules
 In sum this helps devs to write code using same syntax and checks if there are errors in the code. https://github.com/airbnb/javascript , https://github.com/airbnb/css
 * ESLint (http://eslint.org)
@@ -51,7 +52,10 @@ This is what we could do to improve code readability, make HTML and CSS less tig
   * do we really need jQuery? (http://youmightnotneedjquery.com/)
   * use Babel or shims/polyfills if needed
   * if we don't want to remove jQuery we could at least write an adapter for this library so in the future, if situation changes, we could just swap the library and update the adapter leaving the code untouched
+* if we can't live without jQuery we could at least replace it with micro library (e.g. https://github.com/kylebarrow/chibi)
 * _if we use webpack/babel or remove jQuery then we will have to refactor all JS modules so it's managed by it; this could be done in one go but it doesn't have to be_
+#### Review tests
+In order to refactor JS code we will have to have full tests coverage therefore the existing tests should be reviewed.
 ### View rendering
 In order to decrease code duplication and making the website composable (builded from separate components) and easier to maintain/extend we could create composable components from existing code so we can share them across the website(s). We could do it by:
 * using partials
@@ -76,24 +80,28 @@ There are some reasons why we could go with one of above but there are also some
   * devs have to be comfortable with React (but see the last pro)
   * there are ways of UI testing react components but it's not straightforward
 
+### Testing utilities
+Updating front end framework will require testing utilities. There is a plenty of them but for React the best would be probably Jest (https://facebook.github.io/jest) and/or Enzyme (http://airbnb.io/enzyme). The decision about test framework should be preceded by a spike story.
+
 ### Next steps
 As the next step is to choose what is the best for the business have a look at below table which have all above options prioritised and divided into three suggested sets.
 
-The **basic** package has most important updates which need to be done.
+The **basic** package has most important updates. Need to be done.
 
 The **extended** package includes the basic one + good to have updates.
 
-The **full** package includes all of suggested 
-
+The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework, or in this case view library (React), which will have to be adopted by other devs who may not know it (yet ;)). 
 
 Basic | Extended | Full
 ------|----------|-----
 ENV based build | ENV based build | ENV based build
 SASS optimisation | SASS optimisation | SASS optimisation
-JS optimisation | JS optimisation | JS optimisation
+Tests review | Tests review | Tests review
+JS optimisation (add library adapter) | JS optimisation (adapter + replace jQuery with micro library) | JS optimisation (remove jQuery)
 || Babel (ES6) | Babel (ES6)
 || View rendering refactor | View rendering refactor
 || JSHint | ESLint
 || SASSLint | SASSLint
 || Gulp | Webpack
 ||| Front end framework
+||| Updated testing frameworks
