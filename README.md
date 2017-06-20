@@ -80,9 +80,13 @@ There are some reasons why we could go with one of above but there are also some
 As the next step is to choose what is the best for the business have a look at below table which have all above options prioritised and divided into three suggested sets.
 
 The **basic** package has most important updates which need to be done.
+
 The **extended** package includes the basic one + good to have updates.
+
 The **full** package includes all of suggested 
- Basic | Extended | Full
+
+
+Basic | Extended | Full
 ------|----------|-----
 ENV based build | ENV based build | ENV based build
 SASS optimisation | SASS optimisation | SASS optimisation
