@@ -70,7 +70,9 @@ If there is no way we could refactor views so they are composable (shareable) th
 ## Front end framework
 One of the way to modernise UI is to use modern front end framework. The website is quite simple and there is not much of user interaction involved so this **might not be** necessary. Examples:
 * **https://reactjs.net/getting-started/download.html (.NET integration for ReactJS)**
+* https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices
 * https://github.com/lijunle/Nancy.ViewEngines.React (Use React.js as view engine in Nancy)
+* https://github.com/pauldotknopf/react-aspnet-boilerplate
 
 There are some reasons why we could go with one of above but there are also some caveats.
 * PROS:
