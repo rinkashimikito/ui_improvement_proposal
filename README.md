@@ -1,5 +1,5 @@
 # Proposed modernisation of SPTs UI
-The long term target for this update is to make code reuasble, easier to maintain and extend, using latest tools (or as latest as possible). Some of proposed changes are not crutial but good to have. Other ones are more expensive but have many pros in a longer run. There is a summary table sorted by priority at the end of this document. 
+The long term target for this update is to make code reuasble, easier to maintain and extend, using latest tools (or as latest as possible). Some of proposed changes are not crutial but good to have. Other ones are more expensive but have many pros in a longer run. There is a summary table sorted by priority at the end of this document.
 ## The build process
 There are few things we could do to improve our build process. I'm not saying that the process is bad and we definitely need to change it but some tools we use are not developed anymore and future extending might become tricky.
 ### Use Webpack (https://webpack.js.org/) for building front end
@@ -64,7 +64,9 @@ In order to decrease code duplication and making the website composable (builded
   * _probably not possible to share across gov.uk websites_
 * using view components
   * using properties passed to component instead of a Model
-  * _probably not an option for us (speak with Andy?)_
+  * _probably not an option for us (speak with backend dev)_
+
+If there is no way we could refactor views so they are composable (shareable) then probably the way to go would be going with the new front end framework (this should be discussed with backend dev)
 ## Front end framework
 One of the way to modernise UI is to use modern front end framework. The website is quite simple and there is not much of user interaction involved so this **might not be** necessary. Examples:
 * https://github.com/lijunle/Nancy.ViewEngines.React (Use React.js as view engine in Nancy)
@@ -91,7 +93,7 @@ The **basic** package has most important updates. Need to be done.
 
 The **extended** package includes the basic one + good to have updates.
 
-The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework, or in this case view library (React), which will have to be adopted by other devs who may not know it (yet ;)). 
+The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework, or in this case view library (React), which will have to be adopted by other devs who may not know it (yet ;)).
 
 Basic | Extended | Full
 ------|----------|-----
