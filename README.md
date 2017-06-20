@@ -1,6 +1,6 @@
 # Proposed modernisation of SPTs UI
 ## The build process
-There are few things we could do to improve our build process. I'm not saying that the process is bad and we definitely need to change it but some tools we use are not developed anymore and future extending might become tricky. 
+There are few things we could do to improve our build process. I'm not saying that the process is bad and we definitely need to change it but some tools we use are not developed anymore and future extending might become tricky.
 ### Use Webpack (https://webpack.js.org/) for building front end
 * grunt is a very old task runner and has not been updated for a year now
 * webpack can handle (using plugins and modules) concatenating and minifying files, manage dependencies, run tests
@@ -75,3 +75,21 @@ There are some reasons why we could go with one of above but there are also some
   * replacing View Engine and all Razor views will take quite a lot of time
   * devs have to be comfortable with React (but see the last pro)
   * there are ways of UI testing react components but it's not straightforward
+
+### Next steps
+As the next step is to choose what is the best for the business have a look at below table which have all above options prioritised and divided into three suggested sets.
+
+The **basic** package has most important updates which need to be done.
+The **extended** package includes the basic one + good to have updates.
+The **full** package includes all of suggested 
+ Basic | Extended | Full
+------|----------|-----
+ENV based build | ENV based build | ENV based build
+SASS optimisation | SASS optimisation | SASS optimisation
+JS optimisation | JS optimisation | JS optimisation
+|| Babel (ES6) | Babel (ES6)
+|| View rendering refactor | View rendering refactor
+|| JSHint | ESLint
+|| SASSLint | SASSLint
+|| Gulp | Webpack
+||| Front end framework
