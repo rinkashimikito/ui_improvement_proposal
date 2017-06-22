@@ -2,11 +2,6 @@
 The long term target for this update is to make code reuasble, easier to maintain and extend, using latest tools (or as latest as possible). Some of the proposed changes are not crutial but good to have. Other ones are more expensive but have many pros in a longer run. There is a summary table sorted by priority at the end of this document.
 ## The build process
 There are few things we could do to improve our build process. I'm not saying that the process is bad and we definitely need to change it but some tools we use are not developed anymore and future extending might become tricky.
-### Use Webpack (https://webpack.js.org/) for building front end
-* grunt is a very old task runner and has not been updated for a year now
-* webpack can handle (using plugins and modules) concatenating and minifying files, manage dependencies, run tests
-* replacing grunt with webpack **is not crucial** as we can configure grunt to do what we need
-* other option is to use Gulp which is faster than Grunt (Grunt is based on configuring separate independent tasks, each task opens/handles/closes file. Gulp requires less amount of code and is based on Node streams, which allows it to build pipe chains (w/o reopening the same file) and makes it faster)
 ### Add ENV (environment) based build
 * minify JS/CSS on prod (smaller file for user to download)
 * don't minify JS/CSS on dev (easier to maintain and develop)
@@ -15,7 +10,11 @@ There are few things we could do to improve our build process. I'm not saying th
 ### Use babel (https://babeljs.io)
 * we could start using ES6 going forwards (Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows to use ES6 features in your projects and then compiles ES5 to use in production)
 * we could gradually rewrite existing code to ES6
-
+### Use Webpack (https://webpack.js.org/) for building front end
+* grunt is a very old task runner and has not been updated for a year now
+* webpack can handle (using plugins and modules) concatenating and minifying files, manage dependencies, run tests
+* replacing grunt with webpack **is not crucial** as we can configure grunt to do what we need
+* other option is to use Gulp which is faster than Grunt (Grunt is based on configuring separate independent tasks, each task opens/handles/closes file. Gulp requires less amount of code and is based on Node streams, which allows it to build pipe chains (w/o reopening the same file) and makes it faster)
 ### Use linting (static code analysis) JS tool for testing against coding rules
 In sum this helps devs to write code using same syntax and checks if there are errors in the code. https://github.com/airbnb/javascript , https://github.com/airbnb/css
 * ESLint (http://eslint.org)
