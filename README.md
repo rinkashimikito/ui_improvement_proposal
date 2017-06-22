@@ -94,7 +94,8 @@ The **basic** package has most important updates. Need to be done.
 
 The **extended** package includes the basic one + good to have updates.
 
-The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework or view library (React) as it will have to be adopted by other devs who may not know it. 
+The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework or view library (React) as it will have to be adopted by other devs who may not know it. In our case the website is quite simple so new framework / view library should not be difficult to use when following the guidelines.
+
 
 Basic | Extended | Full
 ------|----------|-----
