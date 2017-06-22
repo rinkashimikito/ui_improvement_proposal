@@ -57,6 +57,8 @@ This is what we could do to improve code readability, make HTML and CSS less tig
 #### Review tests
 In order to refactor JS code we will have to have full tests coverage therefore the existing tests should be reviewed.
 ### View rendering
+This needs to be consulted with a backend developer.
+
 In order to decrease code duplication and making the website composable (builded from separate components) and easier to maintain/extend we could create composable components from existing code so we can share them across the website(s). We could do it by:
 * using partials
   * binded with Model
@@ -67,6 +69,8 @@ In order to decrease code duplication and making the website composable (builded
 
 If there is no way we could refactor views so they are composable (shareable) then probably the way to go would be going with the new front end framework (this should be discussed with backend dev)
 ## Front end framework
+This needs to be consulted with a backend developer. It will probably require backend updates along the frontend side.
+
 One of the way to modernise UI is to use modern front end framework. The website is quite simple and there is not much of user interaction involved so this **is not** necessary. Examples:
 * **https://reactjs.net/getting-started/download.html (.NET integration for ReactJS)**
 * https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices
