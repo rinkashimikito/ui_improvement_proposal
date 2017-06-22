@@ -69,7 +69,7 @@ In order to decrease code duplication and making the website composable (builded
 
 If there is no way we could refactor views so they are composable (shareable) then probably the way to go would be going with the new front end framework (this should be discussed with backend dev)
 ## Front end framework
-This needs to be consulted with a backend developer. It will probably require backend updates along the frontend side.
+This needs to be consulted with a backend developer. It will probably require backend updates along the frontend ones.
 
 One of the way to modernise UI is to use modern front end framework. The website is quite simple and there is not much of user interaction involved so this **is not** necessary. Examples:
 * **https://reactjs.net/getting-started/download.html (.NET integration for ReactJS)**
