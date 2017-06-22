@@ -67,7 +67,7 @@ In order to decrease code duplication and making the website composable (builded
 
 If there is no way we could refactor views so they are composable (shareable) then probably the way to go would be going with the new front end framework (this should be discussed with backend dev)
 ## Front end framework
-One of the way to modernise UI is to use modern front end framework. The website is quite simple and there is not much of user interaction involved so this **might not be** necessary. Examples:
+One of the way to modernise UI is to use modern front end framework. The website is quite simple and there is not much of user interaction involved so this **is not** necessary. Examples:
 * **https://reactjs.net/getting-started/download.html (.NET integration for ReactJS)**
 * https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices
 * https://github.com/lijunle/Nancy.ViewEngines.React (Use React.js as view engine in Nancy)
@@ -94,7 +94,7 @@ The **basic** package has most important updates. Need to be done.
 
 The **extended** package includes the basic one + good to have updates.
 
-The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework, or in this case view library (React), which will have to be adopted by other devs who may not know it (yet ;)).
+The **full** package includes all of required and suggested options. It is most expensive (time) but eventualy the code will be greatly maintainable and extendable. The code will be composable and reusable across all of the gov.uk websites (if other pages use the same architecture). There is a drawback with the new front end framework or view library (React) as it will have to be adopted by other devs who may not know it. 
 
 Basic | Extended | Full
 ------|----------|-----
