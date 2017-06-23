@@ -111,6 +111,7 @@ Basic | Extended | Full
 ENV based build | ENV based build | ENV based build
 SASS optimisation | SASS optimisation | SASS optimisation
 JS optimisation (add library adapter) | JS optimisation (adapter + replace jQuery with micro library) | JS optimisation (remove jQuery)
+Tests review | Tests review | Tests review
 || Babel (ES6) | Babel (ES6)
 || View rendering refactor | View rendering refactor
 || JSHint | ESLint
