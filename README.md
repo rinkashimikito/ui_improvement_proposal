@@ -10,9 +10,9 @@ There are few things we could do to improve our build process. I'm not saying th
 ### Use babel (https://babeljs.io)
 * we could start using ES6 going forwards (Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows to use ES6 features in your projects and then compiles ES5 to use in production)
 * we could gradually rewrite existing code to ES6
-### Use Webpack (https://webpack.js.org/) for building front end
-* grunt is a very old task runner and has not been updated for a year now
-* webpack can handle (using plugins and modules) concatenating and minifying files, manage dependencies, run tests
+### Use Gulp/Webpack (https://webpack.js.org/) for building front end
+* we use grunt which is a very old task runner and has not been updated for a year now
+* gulp/webpack can handle (using plugins and modules) concatenating and minifying files, manage dependencies, run tests
 * replacing grunt with webpack **is not crucial** as we can configure grunt to do what we need
 * other option is to use Gulp which is faster than Grunt (Grunt is based on configuring separate independent tasks, each task opens/handles/closes file. Gulp requires less amount of code and is based on Node streams, which allows it to build pipe chains (w/o reopening the same file) and makes it faster)
 ### Use linting (static code analysis) JS tool for testing against coding rules
@@ -54,20 +54,23 @@ This is what we could do to improve code readability, make HTML and CSS less tig
   * if we don't want to remove jQuery we could at least write an adapter for this library so in the future, if situation changes, we could just swap the library and update the adapter leaving the code untouched
 * if we can't live without jQuery we could at least replace it with micro library (e.g. https://github.com/kylebarrow/chibi)
 * _if we use webpack/babel or remove jQuery then we will have to refactor all JS modules so it's managed by it; this could be done in one go but it doesn't have to be_
-#### Review tests
-In order to refactor JS code we will have to have full tests coverage therefore the existing tests should be reviewed.
+* _In order to refactor JS code we will have to have full tests coverage therefore the existing tests should be reviewed_
 ### View rendering
 This needs to be consulted with a backend developer.
 
 In order to decrease code duplication and making the website composable (builded from separate components) and easier to maintain/extend we could create composable components from existing code so we can share them across the website(s). We could do it by:
 * using partials
   * binded with Model
+  * reusable, somewhat shareable 
   * _probably not possible to share across gov.uk websites_
-* using view components
+* **using view components**
   * using properties passed to component instead of a Model
-  * _probably not an option for us (speak with backend dev)_
+  * reusable modules which should be configurable via props
+  * write once, use anywhere
+  * shareable across gov.uk websites
 
-If there is no way we could refactor views so they are composable (shareable) then probably the way to go would be going with the new front end framework (this should be discussed with backend dev)
+This is relatively expensive in the initial phase but should make code more maintainable in longer run.
+
 ## Front end framework
 This needs to be consulted with a backend developer. It will probably require backend updates along the frontend ones as each option requires different bakcend modules.
 
@@ -87,6 +90,8 @@ There are some reasons why we could go with one of above but there are also some
   * replacing View Engine and all Razor views will take quite a lot of time
   * devs have to be comfortable with React (but see the last pro)
   * there are ways of UI testing react components but it's not straightforward
+
+If we refactor views rendering this will become less valuable or even redundant. The website is simple enough to run without extra layer on the top of the view components.
 
 ### Testing utilities
 Updating front end framework will require testing utilities. There is a plenty of them but for React the best would be probably Jest (https://facebook.github.io/jest) and/or Enzyme (http://airbnb.io/enzyme). The decision about test framework should be preceded by a spike story.
